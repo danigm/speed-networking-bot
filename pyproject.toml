@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "speed-networking-bot"
+version = "0.1.0"
+description = "Slack Bot for speed networking random meetings"
+authors = ["Daniel Garcia Moreno <daniel.garcia@suse.com>"]
+license = "GPL-3.0+"
+readme = "README.md"
+
+packages = [
+    { include = "speed_networking" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+slack-bolt = "^1.20.1"
+
+[tool.poetry.scripts]
+speed-networking = "speed_networking.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
